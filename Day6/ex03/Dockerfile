@@ -11,6 +11,7 @@ COPY * .
 RUN conda env create -f environment.yml -n ex03
 
 # expose port 8502
-EXPOSE 8502
+EXPOSE 8501
 
+# run streamlit when the container launches
 CMD ["conda", "run", "--no-capture-output", "-n", "ex03", "streamlit", "run", "main.py", "--server.address", "0.0.0.0"]
