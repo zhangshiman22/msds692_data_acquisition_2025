@@ -10,3 +10,9 @@ with sync_playwright() as p:
     page.goto("https://reddit.com")
 
     # Click the login button and enter id and password.
+    page.locator("#login-button").click()
+    page.locator("#login-username").click()
+    # page.locator("#loginPassword").fill("your_password")
+    # page.locator("#login-submit").click()
+
+    time.sleep(10)
