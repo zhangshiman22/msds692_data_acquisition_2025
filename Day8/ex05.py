@@ -20,4 +20,9 @@ async def main():
         results = await asyncio.gather(*(scrape_page(url, p) for url in urls))
         print(results)
 
+
+# result = await asyncio.gather(
+#                               scrape_page("https://reddit.com"),
+#                               scrape_page("https://linkedin.com"))
+
 asyncio.run(main())
